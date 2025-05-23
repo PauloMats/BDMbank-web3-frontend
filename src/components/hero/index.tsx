@@ -11,7 +11,7 @@ const Hero = (props: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [media, setMedia] = useState({
     backgroundimage: '',
-    video: ''
+    video: '/videos/hero-background.mp4',
   });
 
   const handleVideoLoad = () => setIsVideoLoaded(true);
@@ -25,7 +25,7 @@ const Hero = (props: Props) => {
 
       setMedia({
         backgroundimage: background?.source_url || '',
-        video: video?.source_url || '',
+        video: video?.source_url || '/videos/hero-background.mp4',
       });
     } catch (error) {
       console.error('Error fetching media:', error);
@@ -61,7 +61,7 @@ const Hero = (props: Props) => {
 
   return (
     <Container
-      backgroundimage={media.backgroundimage}
+      backgroundimage={media.video}
       className='w-full pb-[205px] pt-[310px] flex flex-col items-center justify-center relative overflow-hidden'
     >
       {!media.backgroundimage && media.video && (

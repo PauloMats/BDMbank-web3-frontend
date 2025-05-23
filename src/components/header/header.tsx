@@ -6,29 +6,27 @@ const Header: React.FC = () => {
   return (
     <header className="flex justify-between items-center px-9 py-0 w-full h-[77px] max-w-[1920px] max-sm:px-5 max-sm:py-0">
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7eb16a079edb24c4e3a1b55606437b3c9a127e2?placeholderIfAbsent=true"
+        src="/img/Logo-bdmbank.svg"
         className="h-[34px] w-[335px]"
         alt="Logo Dourado Cash DC"
       />
 
       <nav className="flex gap-14 items-center max-md:gap-12 max-sm:hidden">
         <div className="flex gap-2 items-center text-base font-medium text-zinc-50 text-opacity-90">
-          <span>Tecnologias</span>
+          <span>Produtos</span>
           <DropdownIcon />
         </div>
 
         <div className="flex gap-2 items-center text-base font-medium text-zinc-50 text-opacity-90">
-          <span>Mercado BDM</span>
-          <DropdownIcon />
+          <span>App</span>
         </div>
 
         <div className="gap-2 text-base font-medium text-zinc-50 text-opacity-90">
-          Clientes e Empresas
+          Contato
         </div>
 
         <div className="flex gap-2 items-center text-base font-medium text-zinc-50 text-opacity-90">
-          <span>Sobre Nós</span>
-          <DropdownIcon />
+          <span>Ajuda</span>
         </div>
       </nav>
 
@@ -55,7 +53,7 @@ const Header: React.FC = () => {
           Login
         </button>
         <button className="px-8 py-4 text-lg font-bold rounded text-zinc-900 bg-yellow-400 hover:bg-yellow-500 transition-colors">
-          Registro
+          Abrir conta
         </button>
       </div>
     </header>
