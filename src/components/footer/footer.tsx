@@ -4,11 +4,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Container } from './styles';
 import Navigation from '../navigation/navigation';
-import SocialNetworks from '../socialNetworks/socialNetworks';
-import { fetchNavigation } from '@/utils/index';
-import { MenuItem } from '@/services/navigationService';
+// import SocialNetworks from '../socialNetworks/socialNetworks';
+// import { fetchNavigation } from '@/utils/index';
+// import { MenuItem } from '@/services/navigationService';
 import { useEffect, useState, useCallback } from 'react';
-import { useSettings } from '@/context/settings';
+// import { useSettings } from '@/context/settings';
 
 export default function Footer() {
   const [menu, setNavigation] = useState<MenuItem[] | null>(null);
