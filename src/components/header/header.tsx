@@ -1,61 +1,43 @@
-"use client";
+'use client';
 import React from "react";
 import DropdownIcon from "../DropdownIcon/DropdownIcon";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex justify-between items-center px-9 py-0 w-full h-[77px] max-w-[1920px] max-sm:px-5 max-sm:py-0">
-      <img
-        src="/img/Logo-bdmbank.svg"
-        className="h-[34px] w-[335px]"
-        alt="Logo Dourado Cash DC"
-      />
+    <header className="relative w-full bg-black z-50">
+      {/* 🔹 Linha superior */}
+      <img src="/img/line.svg" alt="Top Line" className="w-full" />
 
-      <nav className="flex gap-14 items-center max-md:gap-12 max-sm:hidden">
-        <div className="flex gap-2 items-center text-base font-medium text-zinc-50 text-opacity-90">
-          <span>Produtos</span>
-          <DropdownIcon />
+      {/* 🔹 Navbar */}
+      <div className="flex justify-between items-center px-9 py-3 max-w-[1920px] mx-auto h-[77px] max-sm:px-5">
+        <img src="/img/Logo-bdmbank.svg" className="h-[34px] w-[335px]" alt="Logo" />
+
+        <nav className="flex gap-14 items-center max-md:gap-10 max-sm:hidden">
+          <div className="flex gap-2 items-center text-base font-medium text-white">
+            <span>Produtos</span>
+            <DropdownIcon />
+          </div>
+          <div className="text-base font-medium text-white">App</div>
+          <div className="text-base font-medium text-white">Contato</div>
+          <div className="text-base font-medium text-white">Ajuda</div>
+        </nav>
+
+        <div className="flex gap-2.5 items-center max-sm:hidden">
+          <img src="/img/pt.svg" className="rounded-full h-[50px] w-[50px]" alt="BR" />
+          <img src="/img/en.svg" className="rounded-full h-[30px] w-[30px]" alt="EN" />
+          <img src="/img/es.svg" className="rounded-full h-[30px] w-[30px]" alt="ES" />
         </div>
 
-        <div className="flex gap-2 items-center text-base font-medium text-zinc-50 text-opacity-90">
-          <span>App</span>
+        <div className="flex gap-6 items-center max-sm:hidden">
+          <button className="text-base font-medium text-white">Login</button>
+          <button className="px-8 py-3 text-lg font-bold rounded bg-yellow-400 text-black hover:bg-yellow-500">
+            Abrir conta
+          </button>
         </div>
-
-        <div className="gap-2 text-base font-medium text-zinc-50 text-opacity-90">
-          Contato
-        </div>
-
-        <div className="flex gap-2 items-center text-base font-medium text-zinc-50 text-opacity-90">
-          <span>Ajuda</span>
-        </div>
-      </nav>
-
-      <div className="flex gap-2.5 items-center max-sm:hidden">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/2eab48fb02cb89d3c7a1d74752f195b78810301b?placeholderIfAbsent=true"
-          className="rounded-full h-[30px] w-[30px]"
-          alt="Brazil Flag"
-        />
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f09447ce68c4f3b558f1d6ab08c6b742ae2c2b6?placeholderIfAbsent=true"
-          className="rounded-full h-[30px] w-[30px]"
-          alt="English Flag"
-        />
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6101540a464548bcd5e00ee703f4ba429fd1e3af?placeholderIfAbsent=true"
-          className="rounded-full h-[30px] w-[30px]"
-          alt="Spanish Flag"
-        />
       </div>
 
-      <div className="flex gap-6 items-center max-sm:hidden">
-        <button className="text-base font-medium text-zinc-50 text-opacity-90">
-          Login
-        </button>
-        <button className="px-8 py-4 text-lg font-bold rounded text-zinc-900 bg-yellow-400 hover:bg-yellow-500 transition-colors">
-          Abrir conta
-        </button>
-      </div>
+      {/* 🔹 Linha inferior */}
+      <img src="/img/line.svg" alt="Bottom Line" className="w-full" />
     </header>
   );
 };
