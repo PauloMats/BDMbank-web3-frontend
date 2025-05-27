@@ -4,24 +4,20 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const DesktopContainer = styled.div`
   width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  padding: 70px 100px;
+  display: flex;
+  gap: 78px;
   background:
     linear-gradient(180deg, rgba(25, 10, 3, 0.69) 0%, #000 3.85%), #000;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 70px 15px;
-  box-sizing: border-box;
-  gap: 78px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 69px;
+  box-sizing: border-box;
 
   @media (max-width: 991px) {
     flex-direction: column;
     padding: 40px 20px;
     gap: 40px;
-    height: auto;
   }
 
   @media (max-width: 640px) {
@@ -31,15 +27,15 @@ const DesktopContainer = styled.div`
 `;
 
 const LeftSection = styled.div`
-  width: 755px;
-  height: 940px;
+  width: 100%;
+  max-width: 755px;
+  height: auto;
   position: relative;
   flex-shrink: 0;
   background-color: #090909;
 
   @media (max-width: 991px) {
     width: 100%;
-    height: auto;
     min-height: 600px;
   }
 
@@ -49,9 +45,8 @@ const LeftSection = styled.div`
 `;
 
 const LeftContent = styled.div`
-  left: 40px;
-  width: 676px;
-  height: 853px;
+  left: 50px;
+  width: 500px;
   position: absolute;
   top: 25px;
 
@@ -87,11 +82,11 @@ const SectionTitle = styled.div`
 `;
 
 const SafeIcon = styled(LazyLoadImage)`
-  width: 466px;
-  height: 467px;
+  width: 300px;
+  height: 300px;
   position: absolute;
-  left: 26px;
-  top: 59px;
+  left: 36px;
+  top: 109px;
 
   @media (max-width: 991px) {
     width: 350px;
@@ -126,16 +121,16 @@ const GradientText = styled.div`
 `;
 
 const LeftSectionText = styled(GradientText)`
-  width: 661px;
-  height: 240px;
-  font-size: 66px;
+  width: 100%;
+  max-width: 661px;
+  font-size: 3.5vw;
+  line-height: 1.2;
   position: absolute;
   left: 30px;
-  top: 613px;
+  top: 513px;
 
   @media (max-width: 991px) {
-    font-size: 48px;
-    width: 100%;
+    font-size: 6vw;
     position: relative;
     left: 0;
     top: 40px;
@@ -143,8 +138,7 @@ const LeftSectionText = styled(GradientText)`
   }
 
   @media (max-width: 640px) {
-    font-size: 32px;
-    margin-top: 30px;
+    font-size: 7vw;
   }
 `;
 
@@ -152,7 +146,8 @@ const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 55px;
-  flex-shrink: 0;
+  flex: 1;
+  max-width: 922px;
 
   @media (max-width: 991px) {
     width: 100%;
@@ -161,7 +156,7 @@ const RightSection = styled.div`
 `;
 
 const Card = styled.div`
-  width: 922px;
+  width: 822px;
   position: relative;
   background-color: #090909;
 
@@ -300,7 +295,7 @@ const CoinIcon = styled(LazyLoadImage)`
   width: 265px;
   height: 294px;
   position: absolute;
-  left: 577px;
+  left: 530px;
   top: 113px;
 
   @media (max-width: 991px) {
@@ -324,7 +319,7 @@ const CardImage = styled(LazyLoadImage)`
   height: 367px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   position: absolute;
-  left: 461px;
+  left: 375px;
   top: -9px;
 
   @media (max-width: 991px) {
@@ -348,8 +343,8 @@ const BlurCircleLeft = styled.div`
   height: 313px;
   border-radius: 312.552px;
   position: absolute;
-  left: 15px;
-  top: 134px;
+  left: -15px;
+  top: -40px;
 `;
 
 const BlurCircleTop = styled.div`
@@ -357,8 +352,8 @@ const BlurCircleTop = styled.div`
   height: 222px;
   border-radius: 259.247px;
   position: absolute;
-  left: 572px;
-  top: 149px;
+  left: 450px;
+  top: 49px;
 `;
 
 const BlurCircleBottom = styled.div`
@@ -366,8 +361,8 @@ const BlurCircleBottom = styled.div`
   height: 204px;
   border-radius: 259.247px;
   position: absolute;
-  left: 572px;
-  top: 137px;
+  left: 372px;
+  top: 37px;
 `;
 
 export {
