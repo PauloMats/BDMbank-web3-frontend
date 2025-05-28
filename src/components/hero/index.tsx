@@ -1,32 +1,24 @@
 'use client';
-import React, { useRef, useEffect } from "react";
+import React from "react";
 
 const HeroSection: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) videoRef.current?.load();
-    }, { threshold: 0.25 });
-
-    const current = videoRef.current;
-    if (current) observer.observe(current);
-    return () => { if (current) observer.unobserve(current); };
-  }, []);
-
   return (
     <section className="relative w-full h-[100vh] flex items-center justify-center overflow-hidden max-w-[1920px]">
+      
+      {/* Background Video */}
       <video
-        ref={videoRef}
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         src="/videos/hero-background.mp4"
         autoPlay
         muted
         loop
-        preload="auto"
+        playsInline
       />
+
+      {/* Overlay para escurecer o vídeo */}
       <div className="absolute inset-0 bg-black bg-opacity-80 z-10" />
 
+      {/* Conteúdo principal */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4">
         <p className="text-sm tracking-widest text-neutral-400 mb-4">BEM VINDO AO BDM BANK</p>
         <h1 className="text-6xl md:text-8xl font-extrabold text-white leading-tight">
