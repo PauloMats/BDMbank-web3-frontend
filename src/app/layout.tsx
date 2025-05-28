@@ -4,6 +4,7 @@ import "./globals.css";
 import HeroSection from "../components/hero";
 import Header from "../components/header/header";
 import Desktop2 from "@/components/Desktop2/Desktop2";
+import Desktop3 from "@/components/Desktop3/desktop3";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Header />
         <HeroSection />
         <Desktop2 />
+        <Desktop3 />
       </body>
     </html>
   );
