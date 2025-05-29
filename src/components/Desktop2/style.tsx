@@ -28,7 +28,7 @@ const DesktopContainer = styled.div`
 
 const LeftSection = styled.div`
   width: 100%;
-  max-width: 755px;
+  max-width: 40%;
   height: auto;
   position: relative;
   flex-shrink: 0;
@@ -45,7 +45,7 @@ const LeftSection = styled.div`
 `;
 
 const LeftContent = styled.div`
-  left: 50px;
+  left: 10px;
   width: 500px;
   position: absolute;
   top: 25px;
