@@ -30,34 +30,46 @@ export default function Desktop3() {
   ];
 
   return (
-    <div className="relative bg-black overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/img/image-bg-gradiente.png"
-          alt="background"
-          className="w-full h-full object-cover opacity-50"
-        />
-      </div>
+    <div className="relative bg-black overflow-hidden min-h-screen xl:min-h-[120vh]">
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/img/image-bg-gradiente.png"
+      alt="background"
+      className="w-full h-full object-cover opacity-50"
+    />
+  </div>
 
-      <div className="relative z-10 px-4 xl:px-[6rem] pt-16 text-center text-white">
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-          Conta na <span className="text-yellow-400">web3</span> com tudo o que você precisa
-        </h1>
-        <p className="mt-4 max-w-3xl mx-auto text-gray-300 text-base md:text-lg">
-          O BDM Bank é para quem busca mais do que uma simples conta global, tenha seus negócios no universo da Web3,
-          receba pagamentos com diversos cripto ativos e tokens digitais, tudo na palma de suas mãos e com controle total
-        </p>
-        <p className="mt-2 text-sm text-gray-400">
-          Inscreva-se gratuitamente, liberdade financeira e controle na palma de suas mãos.
-        </p>
-      </div>
-
-      {/* Cards */}
-      <Box alignment="stretch" classname="relative z-10 ps-10 pe-10 xl:ps-[6rem] pt-10 xl:pe-[6rem] pb-10 xl:mt-[8rem] xl:mb-7 gap-8 xl:gap-16 flex-col lg:flex-row">
-        {cards.map((item: Props, j: number) => (
-          <Card className="xl:flex-1" key={j} image={item.image} title={item.title} text={item.text} />
-        ))}
-      </Box>
+  <div className="relative z-10 w-full px-4 xl:px-[6rem]">
+    {/* Título e descrição */}
+    <div className="pt-16 text-center text-white">
+      <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+        Conta na <span className="text-yellow-400">web3</span> com tudo o que você precisa
+      </h1>
+      <p className="mt-4 max-w-3xl mx-auto text-gray-300 text-base md:text-lg">
+        O BDM Bank é para quem busca mais do que uma simples conta global, tenha seus negócios no universo da Web3,
+        receba pagamentos com diversos cripto ativos e tokens digitais, tudo na palma de suas mãos e com controle total
+      </p>
+      <p className="mt-2 text-sm text-gray-400">
+        Inscreva-se gratuitamente, liberdade financeira e controle na palma de suas mãos.
+      </p>
     </div>
+
+    {/* Cards */}
+    <Box
+      alignment="stretch"
+      classname="relative z-10 pt-10 pb-10 xl:mt-[8rem] xl:mb-7 gap-8 xl:gap-16 flex-col lg:flex-row"
+    >
+      {cards.map((item: Props, j: number) => (
+        <Card
+          className="xl:flex-1"
+          key={j}
+          image={item.image}
+          title={item.title}
+          text={item.text}
+        />
+      ))}
+    </Box>
+  </div>
+</div>
   );
 }
