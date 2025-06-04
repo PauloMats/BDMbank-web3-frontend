@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
       />
 
       {/* Overlay para escurecer o vídeo */}
-      <div className="absolute inset-0 bg-black bg-opacity-80 z-10" />
+      <div className="absolute inset-0 bg-[rgba(0,0,0,0.5)] z-10" />
 
       {/* Conteúdo principal */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4">

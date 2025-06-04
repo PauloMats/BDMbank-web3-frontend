@@ -6,11 +6,12 @@ import HeroSection from "../components/hero";
 import Header from "../components/header/header";
 import Desktop2 from "@/components/Desktop2/Desktop2";
 import Desktop3 from "@/components/Desktop3/desktop3";
-import Desktop4 from "@/components/desktop4/desktop4";
+import Desktop4 from "@/components/Desktop4/desktop4";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  
 });
 
 const geistMono = Geist_Mono({
