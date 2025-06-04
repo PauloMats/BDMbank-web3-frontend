@@ -22,10 +22,10 @@ const HeroSection: React.FC = () => {
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4">
         <p className="text-sm tracking-widest text-neutral-400 mb-4">BEM VINDO AO BDM BANK</p>
         <h1 className="text-6xl md:text-8xl font-extrabold text-white leading-tight">
-          Seu banco na <span className="text-yellow-400">Web3.</span>
+          O seu banco digital
         </h1>
         <p className="mt-6 max-w-2xl text-gray-400 text-base md:text-xl">
-          Contas descentralizadas, empréstimos em stablecoins e investimentos em NFTs – tudo sob <strong>seu controle</strong>.
+          Toda a tecnologia e segurança BDM Bank na palma de suas mãos
         </p>
       </div>
     </section>
