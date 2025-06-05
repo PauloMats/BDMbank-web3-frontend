@@ -11,7 +11,7 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  padding: 0 5%;
+  padding: 0 15%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -42,3 +42,17 @@ export const SideImage = styled.img`
     width: 80%;
   }
 `
+
+export const CardWrapper = styled.div`
+  h2 {
+    font-size: 4rem; /* Título maior */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  p, span, div {
+    font-size: 1.25rem; /* Corpo maior */
+    line-height: 1.8;
+  }
+`
+

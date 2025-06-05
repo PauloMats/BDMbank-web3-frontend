@@ -7,6 +7,7 @@ export default function Desktop4() {
       <GradientOverlay />
       <div className="relative z-10 flex flex-col justify-center items-start text-white h-full px-14 max-w-[600px]">
         <Card
+              variant="large"
               title="Crédito <span>PJ</span>"
               text="Faça e Receba pagamentos de BDM Digital <br>
 Aumente a visibilidade do seu negócio para milhares de usuários com o <b>BDMap</b>. <br>

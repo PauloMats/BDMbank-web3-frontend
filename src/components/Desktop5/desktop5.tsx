@@ -6,6 +6,7 @@ export default function Desktop5() {
     <Container>
       <Content>
         <Card
+          variant="large"
           title="CÂMBIO"
           text="<b>As principais moedas e a menor taxa de câmbio.</b> <br>
 taxa de câmbio comercial <br>

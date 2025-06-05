@@ -13,6 +13,7 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding: 0 10%;
 
   @media (max-width: 768px) {
     background-position: top;
