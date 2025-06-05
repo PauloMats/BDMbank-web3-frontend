@@ -1,21 +1,20 @@
 "use client";
 
-import { Container } from './styles';
+import { Container, Title, Text } from './styles';
 import { Props } from './typo';
-import { Title, Text } from './styles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-export default function Card({ className, title, text, image, gap }: Props) {
+export default function Card({ className, title, text, image, gap, variant = 'default' }: Props) {
   return (
-    <Container className={`card flex flex-col gap-${gap ?? 3 } ${className}`}>
+    <Container className={`card flex flex-col gap-${gap ?? 3} ${className}`}>
       {image && (
-        <LazyLoadImage className='max-w-[100%] me-auto ' alt={title} src={image} />
+        <LazyLoadImage className="max-w-[100%] me-auto" alt={title} src={image} />
       )}
       {title && (
-        <Title dangerouslySetInnerHTML={{ __html: title }} />
+        <Title $variant={variant} dangerouslySetInnerHTML={{ __html: title }} />
       )}
       {text && (
-        <Text dangerouslySetInnerHTML={{ __html: text }} />
+        <Text $variant={variant} dangerouslySetInnerHTML={{ __html: text }} />
       )}
     </Container>
   );
