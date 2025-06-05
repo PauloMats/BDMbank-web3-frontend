@@ -1,3 +1,4 @@
+// style.tsx
 'use client'
 
 import styled from 'styled-components'
@@ -6,16 +7,14 @@ export const Container = styled.section`
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url('/img/img-sunset-woman.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #080B12;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between; 
+  padding: 0 5%;
 
   @media (max-width: 768px) {
-    background-position: top;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 2rem;
@@ -23,8 +22,23 @@ export const Container = styled.section`
 `
 
 export const GradientOverlay = styled.div`
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.85) 100%);
-  z-index: 1;
+  display: none;
+`
+
+export const Content = styled.div`
+  z-index: 10;
+  color: white;
+  max-width: 600px;
+`
+
+export const SideImage = styled.img`
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  margin-left: 2rem;
+
+  @media (max-width: 768px) {
+    margin: 2rem 0 0 0;
+    width: 80%;
+  }
 `
