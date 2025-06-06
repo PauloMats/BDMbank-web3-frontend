@@ -6,7 +6,7 @@ export const Container = styled.section`
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url('/img/img-sunset-woman.png');
+  background-image: url('/img/Desktop4-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,11 +21,4 @@ export const Container = styled.section`
     text-align: center;
     padding: 2rem;
   }
-`
-
-export const GradientOverlay = styled.div`
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.85) 100%);
-  z-index: 1;
 `

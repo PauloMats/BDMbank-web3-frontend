@@ -1,10 +1,9 @@
-import { Container, GradientOverlay } from './style'
+import { Container } from './style'
 import Card from '../card/card'
 
 export default function Desktop4() {
   return (
     <Container>
-      <GradientOverlay />
       <div className="relative z-10 flex flex-col justify-center items-start text-white h-full px-14 max-w-[600px]">
         <Card
               variant="large"
