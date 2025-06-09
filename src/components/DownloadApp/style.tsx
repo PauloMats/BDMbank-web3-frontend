@@ -61,7 +61,7 @@ export const StoreBadge = styled.img`
 `
 
 export const SideImage = styled.img`
-  width: 400px;
+  width: 50%;
   max-width: 100%;
   height: auto;
   object-fit: contain;
