@@ -11,6 +11,7 @@ import Desktop5 from "@/components/Desktop5/desktop5";
 import Desktop6 from "@/components/Desktop6/desktop6";
 import Desktop7 from "@/components/Desktop7/desktop7";
 import DownloadApp from "@/components/DownloadApp/DownloadApp";
+import Footer from "@/components/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,6 +48,7 @@ export default function RootLayout({
         <Desktop6 />
         <Desktop7 />
         <DownloadApp />
+        <Footer />
       </body>
     </html>
   );

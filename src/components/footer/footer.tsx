@@ -1,69 +1,91 @@
-"use client";
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { Container } from './styles';
-import Navigation from '../navigation/navigation';
-// import SocialNetworks from '../socialNetworks/socialNetworks';
-// import { fetchNavigation } from '@/utils/index';
-// import { MenuItem } from '@/services/navigationService';
 import { useEffect, useState, useCallback } from 'react';
-// import { useSettings } from '@/context/settings';
+import {
+  Instagram,
+  Youtube,
+  Linkedin,
+  MessageSquare,
+  HelpCircle,
+  Twitter
+} from 'lucide-react';
 
 export default function Footer() {
-  const [menu, setNavigation] = useState<MenuItem[] | null>(null);
-  const { settings } = useSettings();
-  const year = new Date().getFullYear();
+  const [year] = useState(new Date().getFullYear());
 
-  const loadNavigation = useCallback(async () => {
-    try {
-      const [footerMenu] = await Promise.all([fetchNavigation('footer')]);
-      if (footerMenu) setNavigation(footerMenu);
-    } catch (error) {
-      console.error('Error loading navigation:', error);
-    }
-  }, []);
-
-  useEffect(() => {
-    loadNavigation();
-  }, [loadNavigation]);
-
-  if (!settings || !menu) return null;
 
   return (
-    <Container className="bg-white py-5 rounded-t-2xl">
-      <div className="container m-auto px-5">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 py-5">
-          <div className='flex flex-col gap-4 2xl:flex-row 2xl:gap-[9rem]'>
+    <Container className="bg-[#02030F] text-white py-10 rounded-t-2xl">
+      <div className="container mx-auto px-6 flex flex-col gap-10 md:flex-row md:justify-between">
+        
+        {/* Logo + Redes Sociais */}
+        <div className="flex flex-col gap-6">
+          <Link href="/">
+            <Image
+              src={"/img/Logo-bdmbank.svg"}
+              alt="BDM Bank"
+              width={160}
+              height={40}
+              className="h-auto"
+              priority
+            />
+          </Link>
+          <div className="flex gap-4 text-white text-xl">
+            <Link href="#"><Twitter /></Link>
+            <Link href="#"><Instagram /></Link>
+            <Link href="#"><Youtube /></Link>
+            <Link href="#"><Linkedin /></Link>
+          </div>
+        </div>
 
-            <Link href="/">
-              <Image
-                src={settings.custom_logo}
-                alt={settings.blog_info.name}
-                width={160}
-                height={40}
-                className="h-auto"
-                priority
-              />
-            </Link>
+        {/* Suporte */}
+        <div className="flex flex-col gap-4">
+          <Link href="#" className="flex items-center gap-2 font-semibold">
+            <MessageSquare className="w-5 h-5" />
+            Atendimento a Clientes
+          </Link>
+          <Link href="#" className="flex items-center gap-2 font-semibold">
+            <HelpCircle className="w-5 h-5" />
+            Perguntas Frequentes
+          </Link>
+        </div>
 
-            <div className="flex flex-col gap-4 md:max-w-[300px]">
-              <SocialNetworks className="text-xl" data={settings.social_networks} />
-              <p className="text-sm lg:text-md text-gray-700 leading-normal mt-2">
-                {`© ${year} ${settings.blog_info.name}. Todos os direitos reservados.`}
-                <br />
-                Desenvolvido por Dourado.cash
-              </p>
-            </div>
+        {/* Navegação */}
+        <div className="flex flex-col md:flex-row gap-10 text-sm">
+          <div>
+            <h4 className="font-bold mb-2">Produtos</h4>
+            <ul className="space-y-1">
+              <li><Link href="#">Divi</Link></li>
+              <li><Link href="#">Cartão</Link></li>
+              <li><Link href="#">Câmbio</Link></li>
+              <li><Link href="#">Maquininha POS</Link></li>
+              <li><Link href="#">Crédito PJ</Link></li>
+            </ul>
           </div>
 
-          <Navigation
-            defaultexpanded="on"
-            className="flex-1"
-            ListClassName="gap-8 md:gap-4 xl:gap-[8rem] flex-col md:flex-row md:justify-end"
-            data={menu}
-          />
+          <div>
+            <h4 className="font-bold mb-2">Legal</h4>
+            <ul className="space-y-1">
+              <li><Link href="#">Privacidade</Link></li>
+              <li><Link href="#">Termos de Uso</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-2">Empresa</h4>
+            <ul className="space-y-1">
+              <li><Link href="#">Contato</Link></li>
+            </ul>
+          </div>
         </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="text-center text-sm text-gray-400 mt-10">
+        ©{year} BDM BANK. todos os direitos Reservados
       </div>
     </Container>
   );
