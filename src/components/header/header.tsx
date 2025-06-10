@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from "react";
+import Link from "next/link";
 import DropdownIcon from "../DropdownIcon/DropdownIcon";
 
 const Header: React.FC = () => {
@@ -13,20 +14,28 @@ const Header: React.FC = () => {
       {/* NAVBAR PRINCIPAL */}
       <div className="flex justify-between items-center px-6 py-3 max-w-[1920px] mx-auto h-[77px]">
         {/* Logo */}
-        <img
-          src="/img/Logo-bdmbank.svg"
-          className="h-[34px] w-auto"
-          alt="Logo"
-        />
+        <Link href="/">
+            <img
+              src="/img/Logo-bdmbank.svg"
+              className="h-[34px] w-auto cursor-pointer"
+              alt="Logo BDM Bank"
+            />
+        </Link>
 
         {/* Menu desktop */}
         <nav className="hidden lg:flex gap-14 items-center">
-          <div className="flex gap-2 text-base font-medium text-white">
+          <div className="flex gap-2 text-base font-medium text-white cursor-pointer items-center">
             <span>Produtos</span> <DropdownIcon />
           </div>
-          <div className="text-base font-medium text-white">App</div>
-          <div className="text-base font-medium text-white">Contato</div>
-          <div className="text-base font-medium text-white">Ajuda</div>
+          <Link href="/app" className="text-base font-medium text-white hover:text-yellow-400">
+            App
+          </Link>
+          <Link href="/contato" className="text-base font-medium text-white hover:text-yellow-400">
+            Contato
+          </Link>
+          <Link href="/ajuda" className="text-base font-medium text-white hover:text-yellow-400">
+            Ajuda
+          </Link>
         </nav>
 
         {/* Ações - Desktop */}
@@ -44,12 +53,12 @@ const Header: React.FC = () => {
 
         {/* Botão menu mobile */}
         <button
-          className="lg:hidden flex flex-col justify-center items-end space-y-1"
+          className="lg:hidden flex flex-col justify-center items-center h-8 w-8"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span className="w-6 h-[2px] bg-white" />
-          <span className="w-4 h-[2px] bg-white" />
-          <span className="w-5 h-[2px] bg-white" />
+          <span className={`h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'w-6 rotate-45 translate-y-[5px]' : 'w-6 mb-1.5'}`} />
+          <span className={`h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : 'w-4'}`} />
+          <span className={`h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'w-6 -rotate-45 -translate-y-[5px]' : 'w-5 mt-1.5'}`} />
         </button>
       </div>
 
@@ -60,9 +69,9 @@ const Header: React.FC = () => {
             <div className="flex gap-2 items-center">
               <span>Produtos</span> <DropdownIcon />
             </div>
-            <span>App</span>
-            <span>Contato</span>
-            <span>Ajuda</span>
+            <Link href="/app" className="py-2" onClick={() => setMenuOpen(false)}>App</Link>
+            <Link href="/contato" className="py-2" onClick={() => setMenuOpen(false)}>Contato</Link>
+            <Link href="/ajuda" className="py-2" onClick={() => setMenuOpen(false)}>Ajuda</Link>
           </nav>
           <div className="flex gap-2 mt-4">
             <img src="/img/br.svg" className="rounded-full h-6 w-6" alt="BR" />
