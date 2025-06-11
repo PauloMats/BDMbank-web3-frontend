@@ -1,10 +1,32 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import DropdownIcon from "../DropdownIcon/DropdownIcon";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Fecha o dropdown do desktop se clicar fora dele
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDesktopDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Fecha o menu principal quando um link do dropdown mobile é clicado
+  const handleMobileLinkClick = () => {
+    setMenuOpen(false);
+    setMobileDropdownOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full bg-black z-50">
@@ -24,18 +46,29 @@ const Header: React.FC = () => {
 
         {/* Menu desktop */}
         <nav className="hidden lg:flex gap-14 items-center">
-          <div className="flex gap-2 text-base font-medium text-white cursor-pointer items-center">
-            <span>Produtos</span> <DropdownIcon />
+          {/* Dropdown de Produtos */}
+          <div className="relative" ref={dropdownRef}>
+            <div 
+              className="flex gap-2 text-base font-medium text-white cursor-pointer items-center"
+              onClick={() => setDesktopDropdownOpen(!desktopDropdownOpen)}
+            >
+              <span>Produtos</span>
+              <div className={`transition-transform duration-200 ${desktopDropdownOpen ? 'rotate-180' : ''}`}>
+                <DropdownIcon />
+              </div>
+            </div>
+            {desktopDropdownOpen && (
+              <div className="absolute top-full mt-4 w-48 bg-black border border-gray-700 rounded-md shadow-lg py-2">
+                <Link href="/pos" className="block px-4 py-2 text-sm text-white hover:bg-gray-800" onClick={() => setDesktopDropdownOpen(false)}>POS</Link>
+                <Link href="/cambio" className="block px-4 py-2 text-sm text-white hover:bg-gray-800" onClick={() => setDesktopDropdownOpen(false)}>CÂMBIO</Link>
+                <Link href="/cartao" className="block px-4 py-2 text-sm text-white hover:bg-gray-800" onClick={() => setDesktopDropdownOpen(false)}>CARTÃO</Link>
+                <Link href="/credito-pj" className="block px-4 py-2 text-sm text-white hover:bg-gray-800" onClick={() => setDesktopDropdownOpen(false)}>CRÉDITO PJ</Link>
+              </div>
+            )}
           </div>
-          <Link href="/app" className="text-base font-medium text-white hover:text-yellow-400">
-            App
-          </Link>
-          <Link href="/contato" className="text-base font-medium text-white hover:text-yellow-400">
-            Contato
-          </Link>
-          <Link href="/ajuda" className="text-base font-medium text-white hover:text-yellow-400">
-            Ajuda
-          </Link>
+          <Link href="/app" className="text-base font-medium text-white hover:text-yellow-400">App</Link>
+          <Link href="/contato" className="text-base font-medium text-white hover:text-yellow-400">Contato</Link>
+          <Link href="/ajuda" className="text-base font-medium text-white hover:text-yellow-400">Ajuda</Link>
         </nav>
 
         {/* Ações - Desktop */}
@@ -65,25 +98,28 @@ const Header: React.FC = () => {
       {/* Dropdown menu mobile */}
       {menuOpen && (
         <div className="lg:hidden bg-black px-6 pb-6 space-y-4">
-          <nav className="flex flex-col gap-4 text-white">
-            <div className="flex gap-2 items-center">
-              <span>Produtos</span> <DropdownIcon />
+          <nav className="flex flex-col gap-2 text-white">
+            <div 
+              className="flex justify-between items-center py-2 cursor-pointer"
+              onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+            >
+              <span>Produtos</span>
+              <div className={`transition-transform duration-200 ${mobileDropdownOpen ? 'rotate-180' : ''}`}>
+                <DropdownIcon />
+              </div>
             </div>
-            <Link href="/app" className="py-2" onClick={() => setMenuOpen(false)}>App</Link>
+            {mobileDropdownOpen && (
+               <div className="flex flex-col pl-4 border-l-2 border-gray-700">
+                  <Link href="/pos" className="py-2" onClick={handleMobileLinkClick}>POS</Link>
+                  <Link href="/cambio" className="py-2" onClick={handleMobileLinkClick}>CÂMBIO</Link>
+                  <Link href="/cartao" className="py-2" onClick={handleMobileLinkClick}>CARTÃO</Link>
+                  <Link href="/credito-pj" className="py-2" onClick={handleMobileLinkClick}>CRÉDITO PJ</Link>
+               </div>
+            )}
+            <Link href="/app" className="py-2 border-t border-gray-700 mt-2" onClick={() => setMenuOpen(false)}>App</Link>
             <Link href="/contato" className="py-2" onClick={() => setMenuOpen(false)}>Contato</Link>
             <Link href="/ajuda" className="py-2" onClick={() => setMenuOpen(false)}>Ajuda</Link>
           </nav>
-          <div className="flex gap-2 mt-4">
-            <img src="/img/br.svg" className="rounded-full h-6 w-6" alt="BR" />
-            <img src="/img/en.svg" className="rounded-full h-6 w-6" alt="EN" />
-            <img src="/img/es.svg" className="rounded-full h-6 w-6" alt="ES" />
-          </div>
-          <div className="flex flex-col gap-2 mt-4">
-            <button className="text-base text-white">Login</button>
-            <button className="px-4 py-2 bg-yellow-400 text-black font-bold rounded">
-              Abrir conta
-            </button>
-          </div>
         </div>
       )}
 
