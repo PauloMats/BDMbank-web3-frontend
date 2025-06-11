@@ -7,7 +7,7 @@ const CartaoPage = () => {
       <ProductHero 
         title="O Cartão Ideal para suas Necessidades"
         description="Seja para o dia a dia ou para suas viagens, nosso cartão oferece benefícios exclusivos, segurança e controle total dos seus gastos através do nosso app."
-        backgroundImageUrl="/img/background-cartao.jpg" // Altere para a imagem correspondente
+        backgroundImageUrl="/img/cartao-hero.png"
       />
     </main>
   );

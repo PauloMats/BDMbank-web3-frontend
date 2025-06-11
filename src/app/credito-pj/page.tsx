@@ -7,7 +7,7 @@ const CreditoPJPage = () => {
       <ProductHero 
         title="Crédito PJ para Impulsionar sua Empresa"
         description="Linhas de crédito com condições especiais para pessoas jurídicas. Invista no crescimento da sua empresa com o apoio financeiro que você precisa, de forma rápida e sem burocracia."
-        backgroundImageUrl="/img/background-credito-pj.jpg" // Altere para a imagem correspondente
+        backgroundImageUrl="/img/credito-pj-hero.png"
       />
     </main>
   );

@@ -7,7 +7,7 @@ const CambioPage = () => {
       <ProductHero 
         title="Soluções de Câmbio para o seu Negócio"
         description="Oferecemos as melhores taxas e um processo simplificado para suas operações de câmbio. Expanda seus negócios internacionalmente com a segurança e agilidade do BDM Bank."
-        backgroundImageUrl="/img/background-cambio.jpg" // Altere para a imagem correspondente
+        backgroundImageUrl="/img/cambio-hero.png" 
       />
     </main>
   );
