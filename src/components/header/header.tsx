@@ -73,11 +73,6 @@ const Header: React.FC = () => {
 
         {/* Ações - Desktop */}
         <div className="hidden lg:flex gap-6 items-center">
-          <div className="flex gap-2.5">
-            <img src="/img/br.svg" className="rounded-full h-[30px] w-[30px]" alt="BR" />
-            <img src="/img/en.svg" className="rounded-full h-[30px] w-[30px]" alt="EN" />
-            <img src="/img/es.svg" className="rounded-full h-[30px] w-[30px]" alt="ES" />
-          </div>
           <button className="text-base font-medium text-white">Login</button>
           <button className="px-6 py-3 text-lg font-bold rounded bg-yellow-400 text-black hover:bg-yellow-500">
             Abrir conta
