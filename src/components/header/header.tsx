@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import DropdownIcon from "../DropdownIcon/DropdownIcon";
+import DropdownIcon from "@/components/DropdownIcon/DropdownIcon";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-black z-50">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/25 backdrop-blur-md">
       {/* Linha superior decorativa */}
       <img src="/img/line.svg" alt="Top Line" className="w-full" />
 
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
               </div>
             </div>
             {desktopDropdownOpen && (
-              <div className="absolute top-full mt-4 w-48 bg-black border border-gray-700 rounded-md shadow-lg py-2">
+              <div className="absolute top-full mt-4 w-48 bg-black/80 backdrop-blur-lg border border-gray-700 rounded-md shadow-lg py-2">
                 <Link href="/pos" className="block px-4 py-2 text-sm text-white hover:bg-gray-800" onClick={() => setDesktopDropdownOpen(false)}>POS</Link>
                 <Link href="/cambio" className="block px-4 py-2 text-sm text-white hover:bg-gray-800" onClick={() => setDesktopDropdownOpen(false)}>CÂMBIO</Link>
                 <Link href="/cartao" className="block px-4 py-2 text-sm text-white hover:bg-gray-800" onClick={() => setDesktopDropdownOpen(false)}>CARTÃO</Link>
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
 
       {/* Dropdown menu mobile */}
       {menuOpen && (
-        <div className="lg:hidden bg-black px-6 pb-6 space-y-4">
+        <div className="lg:hidden bg-black/80 backdrop-blur-lg px-6 pb-6 space-y-4">
           <nav className="flex flex-col gap-2 text-white">
             <div 
               className="flex justify-between items-center py-2 cursor-pointer"
