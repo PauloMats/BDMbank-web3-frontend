@@ -36,7 +36,7 @@ const CambioServices = () => {
     <div className="relative py-20 bg-black overflow-hidden">
       {/* Imagem de fundo */}
       <img 
-        src="/img/background-ondas.png" // Altere para o caminho da sua imagem
+        src="/img/cambio-bg.png"
         alt="Ondas decorativas"
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-50"
       />
@@ -49,7 +49,7 @@ const CambioServices = () => {
         />
         
         {/* Container dos Cards */}
-        <div className="mt-16 bg-black bg-opacity-40 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-gray-800">
+        <div className="mt-16 bg-opacity-40 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
             {servicesData.map((service, index) => (
               <Card 
