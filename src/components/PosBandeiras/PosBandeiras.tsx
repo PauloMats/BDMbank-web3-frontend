@@ -1,7 +1,4 @@
 import React from 'react';
-// CORREÇÃO: O caminho do import foi ajustado para usar o alias '@', 
-// que é a forma padrão em projetos Next.js para apontar para a raiz. 
-// Isso deve resolver o erro de caminho não encontrado.
 import SectionIntro from '@/components/SectionIntro/SectionIntro';
 
 const bandeirasData = [
