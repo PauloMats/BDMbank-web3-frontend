@@ -67,6 +67,8 @@ export const SideImage = styled.img`
   object-fit: contain;
 
   @media (max-width: 768px) {
-    margin-top: 2rem;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    width: 100%;
   }
 `

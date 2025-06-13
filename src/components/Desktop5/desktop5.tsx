@@ -8,11 +8,11 @@ export default function Desktop5() {
         <Card
           variant="large"
           title="CRÉDITO <span>PJ</span>"
-          text="<b>Oportunidades comerciais</b> <br>
-Suporte confiável e personalizado <br>
-Apoio para seu negócio 1,1% <br>
-Alcance novos horizontes <br>
-Linha de crédito para startups"
+          text="<li><b>Oportunidades comerciais</b></li>
+          <li>Suporte confiável e personalizado</li>
+          <li>Apoio para seu negócio</li>
+          <li>Alcance novos horizontes</li>
+          <li>Linha de crédito para startups</li>"
           gap={4}
         />
         <button className="mt-6 bg-yellow-500 text-black font-semibold px-6 py-2 rounded hover:bg-yellow-600 transition">

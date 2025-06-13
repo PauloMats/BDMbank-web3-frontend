@@ -8,11 +8,11 @@ export default function Desktop7() {
         <Card
           variant="large"
           title="CARTÃO DE <span>CRÉDITO</span>"
-          text="<b>Controle Absoluto sobre seus gastos</b> <br>
-                Cartão Pré-pago  <br>
-                Praticidade e Segurança <br>
-                Adaptado às suas necessidades financeiras <br>
-                Sem surpresas ou juros altos"
+          text="<li><b>Controle Absoluto sobre seus gastos</b> </li>
+          <li> Cartão Pré-pago </li>
+          <li> Praticidade e Segurança </li>
+          <li> Adaptado às suas necessidades financeiras </li>
+          <li> Sem surpresas ou juros altos </li>"
           gap={4}
         />
         <button className="mt-6 bg-yellow-500 text-black font-semibold px-6 py-2 rounded hover:bg-yellow-600 transition">

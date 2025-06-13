@@ -16,7 +16,7 @@ export const Container = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    text-align: start;
     padding: 2rem;
   }
 `

@@ -45,13 +45,16 @@ export default function Desktop3() {
       <h1 className="text-3xl md:text-5xl font-bold leading-tight">
         Conta na <span className="text-yellow-400">web3</span> com tudo o que você precisa
       </h1>
+      <br />
       <p className="mt-4 max-w-3xl mx-auto text-gray-300 text-base md:text-lg">
         O BDM Bank é para quem busca mais do que uma simples conta global, tenha seus negócios no universo da Web3,
         receba pagamentos com diversos cripto ativos e tokens digitais, tudo na palma de suas mãos e com controle total
       </p>
+      <br /> <br />
       <p className="mt-2 text-sm text-gray-400">
         Inscreva-se gratuitamente, liberdade financeira e controle na palma de suas mãos.
       </p>
+      <br /><br />
     </div>
 
     {/* Cards */}
