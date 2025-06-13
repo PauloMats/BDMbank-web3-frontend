@@ -5,9 +5,9 @@ import styled from "styled-components";
 // O contêiner principal da seção
 export const SectionContainer = styled.section`
   width: 100%;
-  max-width: 1440px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 70px 100px;
+  padding: 50px 80px;
   display: flex;
   gap: 40px;
   background: linear-gradient(180deg, rgba(25, 10, 3, 0.69) 0%, #000 3.85%);
@@ -62,7 +62,7 @@ export const CardContent = styled.div<{ direction?: string; justify?: string; al
   display: flex;
   flex-direction: ${props => props.direction || 'row'};
   justify-content: ${props => props.justify || 'space-between'};
-  align-items: ${props => props.align || 'center'};
+  align-items: ${props => props.align || 'stretch'};
   gap: ${props => props.gap || '20px'};
 
   @media (max-width: 768px) {
@@ -79,7 +79,7 @@ export const TextContainer = styled.div<{ align?: string }>`
   justify-content: center;
   align-items: ${({ align }) => (align === 'center' ? 'center' : 'flex-start')};
   gap: 1.5rem;
-  flex: 2; // Dá mais espaço para o texto do que para a imagem nos cards da direita
+  flex: 2;
 
   @media (max-width: 768px) {
     align-items: center;

@@ -23,8 +23,8 @@ const Desktop2 = () => {
       <LayoutColumn>
         <InfoCard>
           {/* O conteúdo do card da esquerda é uma coluna flexível */}
-          <CardContent direction="column" justify="space-around" align="center">
-            <TextContainer align="center">
+          <CardContent direction="column" justify="space-around" align="flex-start">
+            <TextContainer align="flex-start">
               <CardTitle>CONTA SEGURA</CardTitle>
             </TextContainer>
             
@@ -35,8 +35,8 @@ const Desktop2 = () => {
               />
             </ImageWrapper>
             
-            <TextContainer align="center">
-              <CardMainText size="medium" align="center">
+            <TextContainer align="flex-start">
+              <CardMainText size="medium" align="flex-start">
                 Uma conta segura para aporte de todo seu patrimônio
               </CardMainText>
             </TextContainer>
