@@ -8,22 +8,22 @@ import { Props } from '../card/typo';
 export default function ResumeBdmBankSection() {
   const cards: Props[] = [
     {
-      image: '/img/insights.png',
+      image: '/img/pos-icon.png',
       title: 'BDM POS',
       text: 'Aumente a eficiência do seu negócio integrando ferramentas de ponta, mantendo todas as suas necessidades gerenciadas em um único dispositivo.'
     },
     {
-      image: '/img/insights.png',
+      image: '/img/cambio-icon.png',
       title: 'CÂMBIO',
       text: 'Otimize suas transações com a integração de ferramentas avançadas, simplificando a gestão de câmbio de moedas em um único lugar.'
     },
     {
-      image: '/img/insights.png',
+      image: '/img/money-icon.png',
       title: 'CRÉDITO PJ',
       text: 'Melhore a eficiência do seu negócio com a integração de ferramentas avançadas, simplificando a gestão de suas linhas de crédito para Pessoa Jurídica em um único lugar.'
     },
     {
-      image: '/img/insights.png',
+      image: '/img/cartao-icon.png',
       title: 'CARTÃO DE CRÉDITO',
       text: 'Amplie sua liberdade financeira com um cartão de crédito que incorpora ferramentas avançadas, possibilitando o gerenciamento de todos os seus gastos em um único lugar.'
     }

@@ -4,27 +4,27 @@ import Card from '@/components/card/card';
 
 const servicesData = [
   {
-    image: '/img/icons/comodidade.svg', // Exemplo de caminho. Altere para o seu.
+    image: '/img/24h-icon.png',
     title: 'Comodidade Total',
     text: 'Realize todas as operações de câmbio diretamente pelo nosso aplicativo, a qualquer hora e em qualquer lugar.',
   },
   {
-    image: '/img/icons/taxas.svg',
+    image: '/img/discont-icon.png',
     title: 'Taxas Competitivas',
     text: 'Aproveite nossas taxas de câmbio competitivas e economize em suas transações internacionais.',
   },
   {
-    image: '/img/icons/seguranca.svg',
+    image: '/img/security-icon.png',
     title: 'Transações Seguras',
     text: 'Com a tecnologia avançada de segurança do BDM Bank, suas transações de câmbio são protegidas contra fraudes e acessos não autorizados.',
   },
   {
-    image: '/img/icons/atualizacoes.svg',
+    image: '/img/att-icon.png',
     title: 'Atualizações em tempo real',
     text: 'Consulte as taxas de câmbio em tempo real pelo aplicativo e tome decisões informadas sobre suas transações.',
   },
   {
-    image: '/img/icons/suporte.svg',
+    image: '/img/suport-icon.png',
     title: 'Suporte 24/7',
     text: 'Nossa equipe de atendimento está disponível para oferecer suporte e esclarecer suas dúvidas a qualquer momento.',
   },
