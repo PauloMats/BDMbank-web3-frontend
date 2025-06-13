@@ -5,7 +5,7 @@ import Box from '../box/box';
 import Card from '../card/card';
 import { Props } from '../card/typo';
 
-export default function Desktop3() {
+export default function ResumeBdmBankSection() {
   const cards: Props[] = [
     {
       image: '/img/insights.png',

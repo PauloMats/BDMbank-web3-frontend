@@ -1,18 +1,18 @@
 import { Container, Content, SideImage } from './style'
 import Card from '../card/card'
 
-export default function Desktop7() {
+export default function Cambio() {
   return (
     <Container>
       <Content>
         <Card
           variant="large"
-          title="CARTÃO DE <span>CRÉDITO</span>"
-          text="<li><b>Controle Absoluto sobre seus gastos</b> </li>
-          <li> Cartão Pré-pago </li>
-          <li> Praticidade e Segurança </li>
-          <li> Adaptado às suas necessidades financeiras </li>
-          <li> Sem surpresas ou juros altos </li>"
+          title="CÂMBIO"
+          text="<li><b>As principais moedas e a menor taxa de câmbio.</b></li>
+          <li>taxa de câmbio comercial</li>
+          <li>IOF de apenas 1,1%</li>
+          <li>Taxas reduzidas</li>
+          <li>Sem burocracia</li>"
           gap={4}
         />
         <button className="mt-6 bg-yellow-500 text-black font-semibold px-6 py-2 rounded hover:bg-yellow-600 transition">

@@ -1,18 +1,18 @@
 import { Container, Content, SideImage } from './style'
 import Card from '../card/card'
 
-export default function Desktop5() {
+export default function CartaoVisa() {
   return (
     <Container>
       <Content>
         <Card
           variant="large"
-          title="CRÉDITO <span>PJ</span>"
-          text="<li><b>Oportunidades comerciais</b></li>
-          <li>Suporte confiável e personalizado</li>
-          <li>Apoio para seu negócio</li>
-          <li>Alcance novos horizontes</li>
-          <li>Linha de crédito para startups</li>"
+          title="CARTÃO DE <span>CRÉDITO</span>"
+          text="<li><b>Controle Absoluto sobre seus gastos</b> </li>
+          <li> Cartão Pré-pago </li>
+          <li> Praticidade e Segurança </li>
+          <li> Adaptado às suas necessidades financeiras </li>
+          <li> Sem surpresas ou juros altos </li>"
           gap={4}
         />
         <button className="mt-6 bg-yellow-500 text-black font-semibold px-6 py-2 rounded hover:bg-yellow-600 transition">

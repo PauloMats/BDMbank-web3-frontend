@@ -1,10 +1,10 @@
 import HeroSection from "../components/hero";
 import InfosBdmBank from "@/components/InfosBdmBank/InfosBdmBank";
-import Desktop3 from "@/components/Desktop3/desktop3";
-import Desktop4 from "@/components/Desktop4/desktop4";
-import Desktop5 from "@/components/Desktop5/desktop5";
-import Desktop6 from "@/components/Desktop6/desktop6";
-import Desktop7 from "@/components/Desktop7/desktop7";
+import ResumeBdmBankSection from "@/components/ResumeBdmBankSection/ResumeBdmBankSection";
+import BdmPOS from "@/components/BdmPOS/BdmPOS";
+import Cambio from "@/components/Cambio/Cambio";
+import CreditoPJ from "@/components/CreditoPJ/CreditoPJ";
+import CartaoVisa from "@/components/CartaoVisa/CartaoVisa";
 import DownloadApp from "@/components/DownloadApp/DownloadApp";
 
 export default function HomePage() {
@@ -12,11 +12,11 @@ export default function HomePage() {
     <>
       <HeroSection />
       <InfosBdmBank />
-      <Desktop3 />
-      <Desktop4 />
-      <Desktop5 />
-      <Desktop6 />
-      <Desktop7 />
+      <ResumeBdmBankSection />
+      <BdmPOS />
+      <Cambio />
+      <CreditoPJ />
+      <CartaoVisa />
       <DownloadApp />
     </>
   );

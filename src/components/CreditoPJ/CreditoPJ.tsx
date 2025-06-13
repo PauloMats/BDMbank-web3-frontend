@@ -1,7 +1,7 @@
 import { Container, Content, ActionButton } from './style';
 import Card from '../card/card';
 
-export default function Desktop6() {
+export default function CreditoPJ() {
   return (
     <Container>
       <Content>
