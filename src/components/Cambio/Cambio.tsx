@@ -19,8 +19,10 @@ export default function Cambio() {
           Saiba Mais
         </button>
       </Content>
-
-      <SideImage src="/img/image-coin-cambio.png" alt="Imagem lateral" />
+      
+      <SideImage autoPlay loop muted playsInline>
+              <source src="/videos/exchange-coins.mp4" type="video/mp4" />
+            </SideImage>
     </Container>
   )
 }

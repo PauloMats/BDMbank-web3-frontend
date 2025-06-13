@@ -20,7 +20,9 @@ export default function CartaoVisa() {
         </button>
       </Content>
 
-      <SideImage src="/img/image-coin-cambio.png" alt="Imagem lateral" />
+      <SideImage autoPlay loop muted playsInline>
+        <source src="/videos/credit-card.mp4" type="video/mp4" />
+      </SideImage>
     </Container>
   )
 }

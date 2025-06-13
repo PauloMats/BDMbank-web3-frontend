@@ -16,7 +16,7 @@ const PosBandeiras = () => {
     <div className="relative min-h-screen bg-black overflow-hidden flex flex-col justify-center py-20">
       {/* Imagem de fundo */}
       <img 
-        src="/img/background-ondas.png"
+        src="/img/pos-bg.png"
         alt="Ondas decorativas"
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-50"
       />

@@ -31,7 +31,7 @@ export const Content = styled.div`
   max-width: 600px;
 `
 
-export const SideImage = styled.img`
+export const SideImage = styled.video`
   width: 400px;
   height: auto;
   object-fit: cover;
