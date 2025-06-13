@@ -1,8 +1,5 @@
-// src/components/Desktop2/Desktop2.tsx
-
 "use client";
 import React from "react";
-// Importando os novos componentes estilizados com nomes mais claros
 import {
   SectionContainer,
   LayoutColumn,
@@ -16,7 +13,7 @@ import {
   CardImage
 } from "./style";
 
-const Desktop2 = () => {
+const InfosBdmBank = () => {
   return (
     <SectionContainer>
       {/* Coluna da Esquerda */}
@@ -89,4 +86,4 @@ const Desktop2 = () => {
   );
 };
 
-export default Desktop2;
+export default InfosBdmBank;

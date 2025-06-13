@@ -1,5 +1,5 @@
 import HeroSection from "../components/hero";
-import Desktop2 from "@/components/Desktop2/Desktop2";
+import InfosBdmBank from "@/components/InfosBdmBank/InfosBdmBank";
 import Desktop3 from "@/components/Desktop3/desktop3";
 import Desktop4 from "@/components/Desktop4/desktop4";
 import Desktop5 from "@/components/Desktop5/desktop5";
@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <Desktop2 />
+      <InfosBdmBank />
       <Desktop3 />
       <Desktop4 />
       <Desktop5 />
