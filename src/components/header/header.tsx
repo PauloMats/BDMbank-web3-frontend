@@ -66,7 +66,7 @@ const Header: React.FC = () => {
               </div>
             )}
           </div>
-          <Link href="/app" className="text-base font-medium text-white hover:text-yellow-400">App</Link>
+          <Link href="/app-page" className="text-base font-medium text-white hover:text-yellow-400">App</Link>
           <Link href="/contato" className="text-base font-medium text-white hover:text-yellow-400">Contato</Link>
           <Link href="https://bdmbank.zendesk.com/hc/pt-br/requests/new" className="text-base font-medium text-white hover:text-yellow-400" target="_blank" rel="noopener noreferrer">Ajuda</Link>
         </nav>
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
                   <Link href="/credito-pj" className="py-2" onClick={handleMobileLinkClick}>CRÉDITO PJ</Link>
                </div>
             )}
-            <Link href="/app" className="py-2 border-t border-gray-700 mt-2" onClick={() => setMenuOpen(false)}>App</Link>
+            <Link href="/app-page" className="py-2 border-t border-gray-700 mt-2" onClick={() => setMenuOpen(false)}>App</Link>
             <Link href="/contato" className="py-2" onClick={() => setMenuOpen(false)}>Contato</Link>
             <Link href="https://bdmbank.zendesk.com/hc/pt-br/requests/new" target="_blank" rel="noopener noreferrer" className="py-2" onClick={() => setMenuOpen(false)}>Ajuda</Link>
           </nav>
