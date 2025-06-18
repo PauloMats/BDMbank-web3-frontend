@@ -10,7 +10,11 @@ import {
   Linkedin,
   MessageSquare,
   HelpCircle,
-  Twitter
+  Twitter,
+  Facebook,
+  TwitterIcon,
+  XIcon,
+  LucideTwitter
 } from 'lucide-react';
 
 export default function Footer() {
@@ -36,7 +40,7 @@ export default function Footer() {
           <div className="flex gap-4 text-white text-xl">
             <Link href="#"><Twitter /></Link>
             <Link href="#"><Instagram /></Link>
-            <Link href="#"><Youtube /></Link>
+            <Link href="#"><Facebook /></Link>
             <Link href="#"><Linkedin /></Link>
           </div>
         </div>
@@ -58,7 +62,6 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-2">Produtos</h4>
             <ul className="space-y-1">
-              <li><Link href="#">Divi</Link></li>
               <li><Link href="#">Cartão</Link></li>
               <li><Link href="#">Câmbio</Link></li>
               <li><Link href="#">Maquininha POS</Link></li>
@@ -85,7 +88,8 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="text-center text-sm text-gray-400 mt-10">
-        ©{year} BDM BANK. todos os direitos Reservados
+        ©{year} BDM BANK. todos os direitos Reservados 
+        {/* // ADD CNPJ */}
       </div>
     </Container>
   );
