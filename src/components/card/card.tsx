@@ -8,7 +8,7 @@ export default function Card({ className, title, text, image, gap, variant = 'de
   return (
     <Container className={`card flex flex-col gap-${gap ?? 3} ${className}`}>
       {image && (
-        <LazyLoadImage className="max-w-[7%] me-auto" alt={title} src={image} />
+        <LazyLoadImage className="max-w-[10%] me-auto" alt={title} src={image} />
       )}
       {title && (
         <Title $variant={variant} dangerouslySetInnerHTML={{ __html: title }} />

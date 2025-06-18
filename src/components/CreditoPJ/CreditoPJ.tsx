@@ -8,11 +8,11 @@ export default function CreditoPJ() {
         <Card
             variant="large"
             title="Crédito <span>PJ</span>"
-            text=" <li>Faça e Receba pagamentos de BDM Digital</li>
-            <li> Aumente a visibilidade do seu negócio para milhares de usuários com o <b>BDMap</b>.</li>
-            <li>Gestão de funcionários</li>
-            <li>Controle de lucros e despesas</li>
-            <li>Diversos Benefícios em uma única plataforma.</li>"
+            text=" <li><b>Oportunidades comerciais</b></li>
+            <li> Suporte confiável e personalizado</li>
+            <li>Apoio para seu negócio</li>
+            <li>Alcance novos horizontes</li>
+            <li>Linha de crédito para startups</li>"
             gap={4}
           />
         <ActionButton>
