@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductHero from '@/components/ProductHero/ProductHero';
 import CambioServices from '@/components/CambioServices/CambioServices';
+import HowItWorks from '@/components/HowItWorks/HowItWorks';
 
 const CambioPage = () => {
   return (
@@ -11,6 +12,7 @@ const CambioPage = () => {
         backgroundImageUrl="/img/cambio-hero.png" 
       />
       <CambioServices />
+      <HowItWorks />
     </main>
   );
 };
