@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductHero from '@/components/ProductHero/ProductHero';
+import CardHowItWorks from '@/components/CardSteps/CardHowItWorks';
 
 const CartaoPage = () => {
   return (
@@ -9,6 +10,7 @@ const CartaoPage = () => {
         description="Seja para o dia a dia ou para suas viagens, nosso cartão oferece benefícios exclusivos, segurança e controle total dos seus gastos através do nosso app."
         backgroundImageUrl="/img/cartao-hero.png"
       />
+      <CardHowItWorks />
     </main>
   );
 };
