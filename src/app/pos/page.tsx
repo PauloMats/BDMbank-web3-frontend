@@ -1,6 +1,8 @@
+"use client";
 import React from 'react';
 import ProductHero from '@/components/ProductHero/ProductHero';
 import PosBandeiras from '@/components/PosBandeiras/PosBandeiras';
+import FAQ from '@/components/Faq/FAQ';
 
 const PosPage = () => {
   return (
@@ -11,6 +13,7 @@ const PosPage = () => {
         backgroundImageUrl="/img/pos-hero.png"
       />
       <PosBandeiras />
+      <FAQ />
     </main>
   );
 };
