@@ -5,7 +5,6 @@ import DownloadButtons from '@/components/DownloadButtons/DownloadButtons';
 
 // Componente para a Seção 1 (Hero)
 const HeroSection = () => (
-  // AJUSTE: Aumentado o padding vertical para maior espaçamento.
   <section className="bg-[#080B12] text-white py-32 md:py-46">
     <div className="container mx-auto px-2">
       <div className="flex flex-col md:flex-row items-center gap-16">

@@ -43,7 +43,7 @@ export default function ResumeBdmBankSection() {
     {/* Título e descrição */}
     <div className="pt-16 text-center text-white">
       <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-        Conta na <span className="text-yellow-400">web3</span> com tudo o que você precisa
+        Conta <span className="text-yellow-400">digital</span> com tudo o que você precisa
       </h1>
       <br />
       <p className="mt-4 max-w-3xl mx-auto text-gray-300 text-base md:text-lg">
